@@ -1,0 +1,896 @@
+@import "sourse.scss";
+
+body {
+  background-color: #1e1e1e;
+  margin: 0;
+}
+
+////////////////////////////////////
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e3b74869;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $yellow;
+}
+
+////////////////////////////////////
+
+.bg-black {
+  background-color: #111111;
+  padding-top: 1px;
+  padding-bottom: 220px;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 63px;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 41px;
+
+    @media (max-width: $breakpoint1058) {
+      gap: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 162.52%;
+    }
+
+    li:hover {
+      color: $yellow;
+      transition-duration: 0.4s;
+      transform: translateY(-4px);
+    }
+  }
+
+  .btn-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    width: 172px;
+    height: 47px;
+    transition-duration: 0.6s;
+
+    &:hover {
+      transition-duration: 0.7s;
+      background-color: $yellow;
+      border: 2px solid $yellow;
+      border-radius: 15px;
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: $white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+//<------Main-Page----->//
+
+.main-page {
+  padding: $padding;
+  margin-top: 161px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .main-photo {
+    animation-duration: 2s;
+    animation-name: main-photo;
+  }
+  @keyframes main-photo {
+    0% {
+      opacity: 0;
+      transform: rotateY(180deg);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .text-main {
+    display: grid;
+
+    & {
+      -webkit-animation: text-focus-in 0.7s
+        cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+      animation: text-focus-in 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: $white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 66px;
+      line-height: 147.52%;
+
+      @media (max-width: $breakpoint1283) {
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      @media (max-width: $breakpoint1058) {
+        font-size: 35px;
+      }
+    }
+
+    p {
+      margin-top: 36px;
+      color: $white;
+      opacity: $opacity;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 162.52%;
+
+      @media (max-width: $breakpoint1283) {
+        font-size: 16px;
+        line-height: 1;
+      }
+
+      @media (max-width: $breakpoint1058) {
+        font-size: 14px;
+      }
+    }
+
+    .search input {
+      position: absolute;
+      width: 438px;
+      height: 74px;
+      background-color: $white;
+      opacity: 0.1;
+      border-radius: 43px;
+
+      &:hover {
+        box-shadow: 1px 1px 15px 4px #ffb700;
+        transition-duration: 0.5s;
+      }
+
+      @media (max-width: $breakpoint1283) {
+        width: 400px;
+      }
+
+      @media (max-width: $breakpoint1167) {
+        width: 300px;
+      }
+
+      @media (max-width: $breakpoint1058) {
+        width: 250px;
+      }
+    }
+
+    .btn-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 295px;
+      width: 137px;
+      height: 62px;
+      background-color: $yellow;
+      border-radius: 43px;
+      margin-top: 6px;
+
+      &:hover {
+        box-shadow: 1px 1px 15px 4px #ffb700;
+        transition-duration: 0.5s;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 162.52%;
+
+        @media (max-width: $breakpoint1058) {
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: $breakpoint1283) {
+        left: 258px;
+      }
+
+      @media (max-width: $breakpoint1167) {
+        left: 160px;
+      }
+
+      @media (max-width: $breakpoint1058) {
+        left: 150px;
+        width: 95px;
+      }
+    }
+  }
+}
+
+//<------Let’s Introduce
+// Ourself-Page----->
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 392px;
+  padding: $padding;
+
+  .left-text h2 {
+    color: $white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 161.52%;
+
+    @media (max-width: $breakpoint1283) {
+      font-size: 40px;
+      line-height: 2;
+    }
+
+    @media (max-width: $breakpoint1058) {
+      font-size: 30px;
+    }
+  }
+
+  .line {
+    width: 206px;
+    border: 1px solid #6a6a6a;
+    transform: rotate(90deg);
+  }
+
+  .right-text h3 {
+    color: $white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 162.52%;
+
+    @media (max-width: $breakpoint1058) {
+      font-size: 25px;
+    }
+  }
+
+  .right-text p {
+    color: $white;
+    opacity: $opacity;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 162.52%;
+
+    @media (max-width: $breakpoint1058) {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}
+
+//<------Cards(present)-Page----->//
+
+h4 {
+  margin-top: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 143.02%;
+}
+
+.cards {
+  padding: $padding;
+  margin-top: 97px;
+  display: flex;
+  justify-content: center;
+  gap: 31px;
+
+  @media (max-width: $breakpoint1167) {
+    gap: 15px;
+  }
+
+  @media (max-width: $breakpoint1058) {
+    gap: 10px;
+  }
+
+  @media (max-width: $breakpoint1167) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 359px;
+    height: 377px;
+    background: #1d1d1d;
+    border: 1.4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+
+    &:hover {
+      background-color: #2e2e2e;
+      transition-duration: 0.6s;
+    }
+
+    .elips {
+      position: relative;
+      left: 24px;
+      top: 28px;
+      width: 101px;
+      height: 101px;
+      border-radius: 50%;
+      background-color: $white;
+
+      img {
+        position: relative;
+        left: 24px;
+        top: 28px;
+      }
+    }
+
+    .card-text {
+      position: relative;
+      left: 24px;
+      top: 50px;
+
+      span {
+        color: $white;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      p {
+        color: $white;
+        opacity: $opacity;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 162.52%;
+      }
+
+      button {
+        margin-top: 23px;
+        width: 121px;
+        height: 43px;
+        background-color: $yellow;
+        border-radius: 23.5px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 1px 1px 15px 4px #ffb700;
+          transition-duration: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+//<------Gallery-Page----->//
+
+section {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  .section-title {
+    color: #ffffff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 143.02%;
+    margin-top: 179px;
+    margin-bottom: 65px;
+  }
+}
+
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .line-wrapper {
+    width: 100%;
+    min-height: 340px;
+
+    display: flex;
+    gap: 20px;
+
+    .left-card {
+      width: 70%;
+      background-image: url(/img/photo1.png);
+
+      &:hover {
+        box-shadow: 1px 1px 15px 4px #ffb700a9;
+        transition-duration: 0.5s;
+      }
+    }
+
+    .right-card {
+      width: 30%;
+      background-image: url(/img/photo2.png);
+      &:hover {
+        box-shadow: 1px 1px 15px 4px #ffb700a9;
+        transition-duration: 0.5s;
+      }
+    }
+
+    .card-title {
+      width: 100%;
+      position: absolute;
+      bottom: 41px;
+
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: #fffbf2;
+      text-align: center;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+}
+
+.line-reversed {
+  flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 1140px) {
+  .right-card {
+    width: 100%;
+    min-height: 340px;
+  }
+
+  .left-card {
+    width: 100%;
+    min-height: 340px;
+  }
+
+  .line-wrapper {
+    flex-direction: column;
+    padding-left: 153px;
+    padding-right: 152px;
+  }
+
+  .line-reversed {
+    flex-direction: column-reverse;
+  }
+}
+
+//<------Client-Page----->
+
+.cli-section {
+  margin-top: 186px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+
+  span {
+    color: $white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 143.02%;
+  }
+
+  .move {
+    display: flex;
+    gap: 18.78px;
+
+    .move-elips {
+      width: 90.61px;
+      height: 90.61px;
+      background-color: #e6e6e6;
+      border-radius: 50%;
+
+      img {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 35px;
+      }
+
+      &:hover {
+        background: $yellow;
+        transition-duration: 0.5s;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.client-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 104px;
+  gap: 30px;
+
+  @media (max-width: $breakpoint1167) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cli-card {
+    background-color: #1d1d1d;
+    border: 1.4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    width: 359px;
+    height: 368px;
+
+    &:hover {
+      background-color: #2e2e2e;
+      transition-duration: 0.6s;
+    }
+
+    .cli-elips {
+      position: relative;
+      left: 26px;
+      top: 30px;
+      width: 105px;
+      height: 102px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.name-cli {
+  position: relative;
+  top: 20px;
+  left: 24px;
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: $white;
+  }
+}
+
+.text-under-name {
+  position: relative;
+  top: 10px;
+  left: 26px;
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+  }
+}
+
+.text-cadr-cli {
+  position: relative;
+  top: 22px;
+  left: 26px;
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 162.52%;
+    color: $white;
+    opacity: $opacity;
+  }
+}
+
+//<------Team-Page----->
+
+.team-section {
+  margin-top: 188px;
+
+  span {
+    margin-bottom: 109px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 143.02%;
+    color: $white;
+  }
+
+  .team-cards {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: $padding;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint1167) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .team-card {
+      width: 344px;
+      height: 109px;
+      border-radius: 14px;
+
+      &:hover {
+        background-color: $yellow;
+        color: #373737;
+        transition-duration: 1s;
+      }
+
+      .team-elips {
+        position: relative;
+        left: 26px;
+        top: 18px;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background-color: #000000;
+      }
+
+      .team-card-text {
+        width: 120px;
+        position: relative;
+        left: 116px;
+        bottom: 40px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 24px;
+        }
+
+        p {
+          color: $white;
+          opacity: $opacity;
+          position: relative;
+          bottom: 100px;
+          left: 9px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+//<------FAQ-Page----->
+
+.FAQ-section {
+  padding: $padding;
+  margin-top: 197px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-section {
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 54px;
+      line-height: 138.02%;
+      color: $white;
+    }
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 162.52%;
+      color: $white;
+      opacity: $opacity;
+    }
+  }
+
+  .rigth-section {
+    margin-bottom: 217px;
+
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: $white;
+    }
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 162.52%;
+      color: $white;
+      opacity: $opacity;
+    }
+
+    .line {
+      margin-top: 39px;
+      width: 539px;
+      background: #d9d9d9;
+      opacity: 0.05;
+      border: 2px solid #ffffff;
+    }
+
+    .text-under-line {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    h6 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+}
+
+//<------Subscribe-Page----->
+.subscribe-section {
+  margin: 0 auto;
+  padding-left: 97px;
+  padding-right: 98px;
+  width: 1245px;
+  height: 356px;
+  background-color: #47474780;
+  margin-bottom: 242px;
+
+  @media (max-width: $breakpoint1167) {
+    display: flex;
+    padding-left: 97px;
+    flex-wrap: wrap;
+  }
+
+  span {
+    position: relative;
+    top: 93px;
+    display: flex;
+    justify-content: center;
+    font-family: "Helvetica Now Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 137%;
+    color: $white;
+  }
+
+  .input-section {
+    position: relative;
+    top: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    input {
+      width: 276px;
+      height: 53px;
+      background: #e4e4e4;
+      border-radius: 8px 0px 0px 8px;
+    }
+
+    button {
+      width: 116px;
+      height: 53px;
+      background: #e3b748;
+      border-radius: 0px 8px 8px 0px;
+    }
+  }
+}
+
+//<----Footer---->
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 367px;
+  background-color: #111111;
+
+  nav {
+    display: flex;
+    gap: 79px;
+    padding-left: 136px;
+    padding-right: 120px;
+  }
+
+  .icons {
+    display: flex;
+    gap: 22px;
+
+    .elips-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    img:hover {
+      transition-duration: 0.4s;
+      transform: translateY(-4px);
+    }
+  }
+}
